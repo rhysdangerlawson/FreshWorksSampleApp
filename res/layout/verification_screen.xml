@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 	android:gravity="center" android:orientation="vertical"
+    android:layout_height="fill_parent" android:background="#E5E5E5">
+
+    <TextView
+        android:text="Please Verify Your Account."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verificationStatus"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="?attr/textColorAlertDialogListItem"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:text="If you did not receive an email verification, click here to resend."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resend"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:text="Resend"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/resend_button"
+        android:background="@color/colorAccent" />
+
+    <Button
+        android:text="Done"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/done"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

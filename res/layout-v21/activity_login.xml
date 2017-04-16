@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/firebase_lockup_400"
+        android:id="@+id/imageView"
+        android:layout_weight="0.05"
+        android:layout_marginBottom="100dp"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05">
+
+        <EditText
+            android:id="@+id/field_email"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/field_password"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:elevation="6dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/email_sign_in_button"
+            android:layout_width="match_parent"
+            android:text="@string/sign_in"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.MyDarkButton"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:id="@+id/email_create_account_button"
+            android:layout_width="match_parent"
+            android:text="@string/create_account"
+            android:theme="@style/ThemeOverlay.MyDarkButton"
+            android:layout_height="40dp"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:text="Forgot Password?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset_password"
+            android:layout_weight="0.05"
+            android:autoLink="none"
+            android:gravity="center_horizontal"
+            android:maxWidth="200dp"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"
+            android:onClick="onClick"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ProgressBar
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_weight="0.05"
+        tools:visibility="visible"
+        android:layout_marginTop="50dp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/firebase_lockup_400"
+        android:id="@+id/imageView"
+        android:layout_weight="0.05"
+        android:layout_marginBottom="100dp" />
+
+    <EditText
+        android:id="@+id/field_email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        tools:ignore="NestedWeights" />
+
+    <EditText
+        android:id="@+id/field_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:elevation="6dp" />
+
+    <Button
+        android:id="@+id/email_sign_in_button"
+        android:layout_width="200dp"
+        android:text="@string/sign_in"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MyDarkButton"/>
+
+    <Button
+        android:id="@+id/email_create_account_button"
+        android:layout_width="200dp"
+        android:text="@string/create_account"
+        android:theme="@style/ThemeOverlay.MyDarkButton"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:text="Reset Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset_password"
+        android:layout_weight="0.05"
+        android:autoLink="none"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        android:clickable="true"
+        android:textSize="18sp"
+        android:textColor="#00000000" />
+</LinearLayout>
